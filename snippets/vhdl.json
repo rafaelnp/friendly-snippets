@@ -8,11 +8,30 @@
             "use IEEE.numeric_std.all;"
         ]
     },
+    "library": {
+        "prefix": "lib",
+        "description": "Add a Library and Use statement",
+        "body": [
+            "library ${1:library_name};",
+            "use ${1:library_name}.${2:package_name}.${3:entity_name};"
+        ]
+    },
+    "xilinx_library": {
+        "prefix": "libx",
+        "description": "Add a the standard Xilinx Unisim Library",
+        "body": [
+            "library UNISIM;",
+            "use UNISIM.VComponents.all;"
+        ]
+    },
     "entity_declaration": {
         "prefix": "ent",
         "description": "Entity Declaration",
         "body": [
             "entity ${1:$TM_FILENAME_BASE} is",
+            "\tgeneric (",
+            "\t\t${2}",
+            "\t);",
             "\tport (",
             "\t\t$0",
             "\t);",
@@ -65,6 +84,11 @@
             "end package body ${1:$TM_FILENAME_BASE};"
         ]
     },
+    "when": {
+        "prefix": "when",
+        "description": "When Statement",
+        "body": ["when ${1:condition} =>", "\t$0"]
+    },
     "case": {
         "prefix": "case",
         "description": "Case Statement",
@@ -116,6 +140,14 @@
             "else",
             "\t",
             "end if;"
+        ]
+    },
+    "else_if": {
+        "prefix": "elsif",
+        "description": "Elsif Statement",
+        "body": [
+            "elsif ${1:condition} then",
+            "\t$0"
         ]
     },
     "for": {
