@@ -8,6 +8,15 @@
             "use IEEE.numeric_std.all;"
         ]
     },
+    "vunit_imports": {
+        "prefix": "vunit",
+        "description": "VUnit Packages",
+        "body": [
+            "library vunit_lib;",
+            "context vunit_lib.vunit_context;",
+            "context vunit_lib.vc_context;"
+        ]
+    },
     "entity_declaration": {
         "prefix": "ent",
         "description": "Entity Declaration",
