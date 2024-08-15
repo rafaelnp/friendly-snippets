@@ -416,7 +416,7 @@
         "prefix": "ifunc",
         "description": "impure function definition",
         "body": [
-            "impure function ${1:func_name}(${2:param} : ${3:param_type}) return ${2:ret_type};"
+            "impure function ${1:func_name}(${2:param} : ${3:param_type}) return ${4:ret_type};"
         ]
     },
     "impure_function_impl": {
@@ -437,7 +437,7 @@
         "prefix": "func",
         "description": "pure function declaration",
         "body": [
-            "function ${1:func_name}(${2:param} : ${3:param_type}) return ${2:ret_type};"
+            "function ${1:func_name}(${2:param} : ${3:param_type}) return ${4:ret_type};"
         ]
     },
     "function_impl": {
