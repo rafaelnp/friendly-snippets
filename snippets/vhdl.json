@@ -411,5 +411,47 @@
             "\t$0",
             "end loop $1;"
         ]
+    },
+    "impure_function_dec": {
+        "prefix": "ifunc",
+        "description": "impure function definition",
+        "body": [
+            "impure function ${1:func_name}(${2:param} : ${3:param_type}) return ${2:ret_type};"
+        ]
+    },
+    "impure_function_impl": {
+        "prefix": "ifunci",
+        "description": "impure function implementation",
+        "body": [
+            "impure function ${1:func_name}(",
+            "\t${2:param}: ${3:param_type}",
+            ") return ${4:ret_type} is",
+            "\tvariable ${5:ret_var} : $4",
+            "begin",
+            "\t",
+            "\treturn $5;",
+            "end function $1;"
+        ]
+    },
+    "function_dec": {
+        "prefix": "func",
+        "description": "pure function declaration",
+        "body": [
+            "function ${1:func_name}(${2:param} : ${3:param_type}) return ${2:ret_type};"
+        ]
+    },
+    "function_impl": {
+        "prefix": "funci",
+        "description": "pure function implementation",
+        "body": [
+            "function ${1:func_name}(",
+            "\t${2:param}: ${3:param_type}",
+            ") return ${4:ret_type} is",
+            "\tvariable ${5:ret_var} : $4",
+            "begin",
+            "\t",
+            "\treturn $5;",
+            "end function $1;"
+        ]
     }
 }
