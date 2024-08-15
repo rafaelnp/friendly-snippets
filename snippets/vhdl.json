@@ -160,6 +160,15 @@
             "end generate $1;"
         ]
     },
+    "for_labelled": {
+        "prefix": "forl",
+        "description": "For loop labelled",
+        "body": [
+            "${1:loop_label}: for ${2:loop_var} in ${3:range} loop",
+            "\t$0",
+            "end loop $1;"
+        ]
+    },
     "assert": {
         "prefix": "assert",
         "description": "Assertion",
@@ -371,9 +380,36 @@
         "description": "Integer (Range Limitation)",
         "body": "integer range ${1:0} ${2|downto,to|} ${3:255}"
     },
-    "while loop": {
+    "while_loop": {
         "prefix": "while",
         "description": "While Loop",
         "body": ["while ${1:condition} loop", "\t$0", "end loop;"]
+    },
+    "while_loop_labelled": {
+        "prefix": "whilel",
+        "description": "While Loop labelled",
+        "body": [
+            "${1:loop_label}: while ${2:condition} loop",
+            "\t$0",
+            "end loop $1;"
+        ]
+    },
+    "loop": {
+        "prefix": "loop",
+        "description": "Loop",
+        "body": [
+            "loop",
+            "\t$0",
+            "end loop;"
+        ]
+    },
+    "loop_labelled": {
+        "prefix": "loopl",
+        "description": "Loop labelled",
+        "body": [
+            "${1:loop_label}: loop",
+            "\t$0",
+            "end loop $1;"
+        ]
     }
 }
