@@ -367,12 +367,12 @@
     },
     "ones": {
         "prefix": "oth1",
-        "description": "Zero Others",
+        "description": "One Others",
         "body": "(others => '1')"
     },
     "ones_arr": {
         "prefix": "otharr1",
-        "description": "Zero Others Array",
+        "description": "One Others Array",
         "body": "(others => (others => '1'))"
     },
     "integer_range_limitation": {
